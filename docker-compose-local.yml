@@ -1,0 +1,32 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres
+    env_file: imagine.env
+    ports:
+      - "9025:5432"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    networks:
+      - imagine_network
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile_local
+    env_file: imagine.env
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    networks:
+      - imagine_network
+
+
+networks:
+  imagine_network:
+    driver: bridge
