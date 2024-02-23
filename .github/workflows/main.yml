@@ -1,8 +1,8 @@
 name: Lint Code base
-
+# On production maybe we need to add others branch and exclude others branch as well
 on:
   push:
-    branches-ignore:
+    branches:
       - master
   pull_request:
     branches:
