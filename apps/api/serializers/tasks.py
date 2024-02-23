@@ -10,6 +10,7 @@ class TasksSerializer(serializers.ModelSerializer):
             "id",
             "name",
             "description",
+            "status",
             "uuid",
             "is_active",
             "created_at",

@@ -10,4 +10,8 @@ urlpatterns = [
         "tasks/",
         include("apps.api.urls.tasks"),
     ),
+    path(
+        "manage/task/",
+        include("apps.api.urls.manage_task_state"),
+    ),
 ]

@@ -21,8 +21,8 @@ class TasksModels(BaseModel):
     status = models.CharField(choices=ENUMS_TASK_STATE_MAP, max_length=8, default="NEW")
 
     class Meta:
-        verbose_name = "Bank"
-        verbose_name_plural = "Banks"
+        verbose_name = "Task"
+        verbose_name_plural = "Tasks"
 
     def __str__(self):
         return self.name
