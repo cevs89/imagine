@@ -19,6 +19,8 @@ case $1 in
     trap cleanup EXIT
     $COMPOSE up -d --build --remove-orphans
     $COMPOSE exec web python manage.py migrate
+    $COMPOSE exec web python manage.py loaddata fixtures/users_admin.json
+
     $COMPOSE logs -f web
     ;;
     migrate)

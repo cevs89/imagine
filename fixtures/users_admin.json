@@ -1,0 +1,19 @@
+[
+{
+    "model": "apps_accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$i9BTq3XqGihiBROG5jOCUW$GBuj20PCUVEDQVv99QvLRhbG5cZENkV4gEqVIVz0pbw=",
+        "last_login": "2024-02-23T20:16:08.784Z",
+        "is_superuser": true,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-02-23T20:15:51.302Z",
+        "email": "imagine@example.com",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

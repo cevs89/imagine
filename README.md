@@ -56,6 +56,29 @@ imagine.sh commands:
 
 `pip install -r requirements/base.txt`
 
+**4- load User Admin and Group Users**
+
+`python manage.py loaddata fixtures/users_admin.json`
+___
+
+
+## User Admin Default
+
+You have to use the following credentials
+
+| user                 | password    |
+|----------------------|-------------|
+| imagine@example.com  | imagine123  |
+
+___
+
+## Documentation API
+#### Imagine API (v1)
+
+Auto Docs by Schema swagger: [http://localhost:8000/docs/](http://localhost:8000/docs/)
+
+Imagine API ReDoc: [http://localhost:8000/redoc/](http://localhost:8000/redoc/)
+
 ___
 
 ## Install this if you need to development
