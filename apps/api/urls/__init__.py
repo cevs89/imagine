@@ -6,4 +6,8 @@ urlpatterns = [
         "obtain/token/",
         include("apps.api.urls.obtain_token"),
     ),
+    path(
+        "tasks/",
+        include("apps.api.urls.tasks"),
+    ),
 ]
