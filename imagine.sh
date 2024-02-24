@@ -8,6 +8,7 @@ case $1 in
   -h|--help|help)
     echo "imagine.sh commands:"
     echo "  runserver: run the development stack"
+    echo "  test: You have to running runserver first and other terminal you run this command"
     echo "  migrate: run migrate to DB"
     echo "  run: Just run de server"
     echo "  manage.py: run a manage.py command"
@@ -27,7 +28,7 @@ case $1 in
     shift
     $COMPOSE exec web python manage.py migrate
     ;;
-    runtest)
+    test)
     shift
     $COMPOSE exec web python manage.py test
     ;;
