@@ -67,9 +67,22 @@ imagine.sh commands:
 
 `pip install -r requirements/base.txt`
 
-**4- load User Admin and Group Users**
+**4.- Install Migrations**
+
+`python manage.py migrate`
+
+**5- load User Admin and Group Users**
 
 `python manage.py loaddata fixtures/users_admin.json`
+
+**6- Run local server**
+
+`python manage.py runserver`
+
+**Comment:**
+
+> If you connect like this, it's just for development, you will have a sqlite3 DB or you can copy file:
+> imagine.env, change the name just for `.env` and put in there your credentials for postgres
 ___
 
 
