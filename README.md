@@ -3,6 +3,17 @@
 ## Python Version
 `>3.10`
 
+___
+
+**Comment**
+This project it was created with:
+
+* SOLID Concept
+* Abstraction
+* POO
+* Clean Code
+___
+
 ## Docker | Run server
 > You had to have installed  `docker` and `docker-compose`
 >

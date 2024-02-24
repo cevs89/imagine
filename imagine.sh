@@ -27,7 +27,11 @@ case $1 in
     shift
     $COMPOSE exec web python manage.py migrate
     ;;
-    exec  )
+    runtest)
+    shift
+    $COMPOSE exec web python manage.py test
+    ;;
+    exec)
     shift
     $COMPOSE exec web bash
     ;;
