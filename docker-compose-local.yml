@@ -1,13 +1,14 @@
 version: '3.1'
 
 services:
-  postgres:
+  imagine_postgres:
     image: postgres
+    container_name: imagine_postgres
     env_file: imagine.env
     ports:
       - "9025:5432"
     volumes:
-      - ./data/db:/var/lib/postgresql/data
+      - imagine_database:/var/lib/postgresql/data
     networks:
       - imagine_network
 
@@ -22,11 +23,13 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - postgres
+      - imagine_postgres
     networks:
       - imagine_network
-
 
 networks:
   imagine_network:
     driver: bridge
+
+volumes:
+  imagine_database:
